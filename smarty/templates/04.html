@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keyword" content="">
+    <meta name="description" content="">
+	<title>web</title>
+
+	<!--
+	   literal标签内不让smarty识别
+	 -->
+
+	<script type="text/javascript"></script>
+    <style type="text/css"></style>
+
+
+</head>
+<body> 
+    <h2>数组使用</h2> 
+    {$fruit[2]}<br>
+    {$fruit.3}<br>
+    {$animal['deguo']}<br>
+    {$animal.anxi}<br>
+    <hr/>
+    {foreach $fruit as $k => $v}
+         {$k}---{$v}<br>
+       {foreachelse}
+         数组没有任何元素!<br>
+    {/foreach}
+    <hr/>
+    <h2>关联数组</h2>
+    <pre>
+         foreach遍历数组内部关键字：
+         { 值变量@iteration }-------1开始
+         { 值变量@index }----------0开始
+         { 值变量@first }---------判断第一个元素，返回boolea值
+         { 值变量@total }------获取数组元素长度个数
+         { 值变量@show }-------判断当前数组是否遍历元素出来，返回bool值
+    </pre>
+    {foreach $animal as $m => $n}
+       {$n@iteration}::{$m}----{$n}<br/>
+    {foreachelse}
+       没有任何记录！
+    {/foreach}
+    数组元素总个数:{$n@total}<br>
+    {section name="wo" loop="animal"}
+           
+        
+    {/section}
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+{config_load file="site.conf"}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keyword" content="">
+    <meta name="description" content="">
+	<title>web</title>
+
+	<!--
+	   literal标签内不让smarty识别
+	 -->
+	{literal} 
+	<script type="text/javascript"></script>
+    <style type="text/css"></style>
+
+	{/literal}
+</head>
+<body> 
+    <h2>配置变量使用</h2> 
+    {#NETWORK#}<br/>
+    {#PUBLIC#}<br/>
+    {#EAL#}<br/>
+    {$smarty.config.NETWORK}<br>
+</body>
+</html>

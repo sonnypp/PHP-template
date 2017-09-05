@@ -1,0 +1,118 @@
+<!--
+Javascript涉及到的相关技术点
+
+
+dom操作
+   document.getElementById()
+   document.getElementByTagName()
+
+事件操作
+   dom2级事件操作
+   主流浏览器
+     addEventListener()
+     removeEventListener()
+    IE浏览器
+
+
+-->
+
+
+  <!--
+
+    单路分支
+       {if 条件}
+          分支逻辑
+       {/if}
+
+    双路分支
+       {if 条件}
+       {else}
+       {/if}
+    多路分支
+        {if 条件}
+        {elseif 条件}
+        {elseif 条件}
+        {else}
+        {/if}
+    -->
+
+
+复选框 下拉列表 单选按钮的应用
+
+1、复选框
+  {html_checkboxes options=$outval name="hobby" seled=$selecked separator=""} 
+
+2、下拉列表
+
+
+
+
+
+布局继承使用
+-------------------------------------------
+layout.html
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+
+</head>
+
+<body>
+
+---------------------
+写好头部部分代码
+---------------------
+//多个block
+{block name="1"}{/block}
+
+{block name="2"}{/block}
+
+{block name="3"}{/block}
+
+{block name="4"}{/block}
+
+  
+---------------------
+  写好尾部部分代码
+---------------------
+</body>
+
+</html>
+
+
+
+index.html
+{extends file="layout.html"}
+
+{block name=""}
+    写下主要代码
+
+{/block}
+
+！！！注意写block 加名字  主要是为了将页面添加到某一个模块
+----------------------------------------------------------
+
+
+
+include引入模板或者用extends 继承页面
+
+{include file=""}
+
+{extends file=""}
+
+
+------------------------------------------
+
+
+cache
+
+缓存类型：页面缓存、数据缓存
+页面缓存：php代码被php模板解释完毕生成的静态内容，放到一个文件里边，叫做缓存文件
+
+数据缓存：把mysql的数据读取出来放到速度更快的介质（内存、文件）上操作，扎样对各方面资源都有节省
+

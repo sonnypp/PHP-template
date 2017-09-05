@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keyword" content="">
+    <meta name="description" content="">
+	<title>web</title>
+
+	<!--
+	   literal标签内不让smarty识别
+	 -->
+
+	<script type="text/javascript"></script>
+    <style type="text/css"></style>
+
+
+</head>
+<body> 
+    <h2>复选框使用</h2> 
+    爱好:<br>
+    {html_checkboxes name="hobby" options=$outval selected=$seled separator="&nbsp;&nbsp;"}
+ <!--    <input type="checkbox" name="hobby[]" value="a">篮球<br>
+    <input type="checkbox" name="hobby[]" value="c">网球<br>
+    <input type="checkbox" name="hobby[]" value="b">足球<br>
+    <input type="checkbox" name="hobby[]" value="d">网球 -->
+    <hr>
+    <h2>下拉列表应用</h2>
+    {html_options name="city" options=$area selected = $seled class="name"}
+    城市:
+       <select name="city">
+             <option value="1">北京</option>
+             <option value="2">上海</option>
+             <option value="3">深圳</option>
+             <option value="4">厦门</option>
+       </select>
+    <hr>
+
+    You put the user:<br>
+    username:{$username}<br>
+    password:{$password}<br>
+</body>
+</html>

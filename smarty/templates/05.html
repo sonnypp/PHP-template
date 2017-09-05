@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keyword" content="">
+    <meta name="description" content="">
+	<title>web</title>
+
+	<!--
+	   literal标签内不让smarty识别
+	 -->
+
+	<script type="text/javascript"></script>
+    <style type="text/css"></style>
+
+
+</head>
+<body> 
+    <h2>分支结构使用</h2> 
+    {if $week==1}
+         Mon<br/>
+    {elseif $week==2}
+         Tue<br>
+    {elseif $week==3} Wen<br>
+    {elseif $week==4} Thursday<br>
+    {elseif $week==5} Friday<br>
+    {else} weekend
+    {/if}
+
+</body>
+</html>
